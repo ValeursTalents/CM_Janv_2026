@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Formation Courage Managérial - Développez votre assertivité et votre leadership dans un environnement VUCA">
-    <title>Formation Courage Managérial</title>
+    <title>Formation Courage Managérial - VT</title>
     <style>
         * {
             margin: 0;
@@ -15,201 +14,258 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            color: #473c32;
+            background-color: #ffffff;
         }
 
+        /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #94c11f 0%, #7aa518 100%);
             color: white;
             padding: 3rem 2rem;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        header img {
+        .logo {
             max-width: 200px;
             height: auto;
             margin-bottom: 1.5rem;
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
+            filter: brightness(0) invert(1);
         }
 
-        header h1 {
+        h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
-        .accroche {
+        .tagline {
             font-size: 1.2rem;
-            font-style: italic;
-            max-width: 800px;
-            margin: 0 auto;
+            font-weight: 300;
             opacity: 0.95;
         }
 
-        main {
+        /* Container */
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
 
+        /* Sections */
         section {
             background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
+            padding: 2.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #94c11f;
         }
 
         h2 {
-            color: #667eea;
-            font-size: 2rem;
+            color: #473c32;
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            border-bottom: 3px solid #667eea;
             padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ee7601;
         }
 
         h3 {
-            color: #764ba2;
-            font-size: 1.4rem;
+            color: #94c11f;
+            font-size: 1.3rem;
             margin-top: 1.5rem;
             margin-bottom: 1rem;
         }
 
-        h4 {
-            color: #555;
-            font-size: 1.1rem;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
+        p, li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
         }
 
         ul {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
+            list-style-position: inside;
+            padding-left: 1rem;
         }
 
         li {
-            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
         }
 
-        details {
-            background: #f9f9f9;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            cursor: pointer;
+        /* Table Programme */
+        .programme-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            display: block;
         }
 
-        details summary {
-            font-size: 1.2rem;
-            color: #667eea;
-            cursor: pointer;
-            user-select: none;
+        .programme-table table {
+            width: 100%;
+            min-width: 600px;
         }
 
-        details summary:hover {
-            color: #764ba2;
-        }
-
-        details[open] summary {
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .module-content {
-            padding: 1rem 0;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #667eea;
+        .programme-table th {
+            background-color: #94c11f;
             color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 6px;
+            padding: 1rem;
+            text-align: left;
             font-weight: 600;
-            transition: background 0.3s ease;
         }
 
-        .btn:hover {
-            background: #764ba2;
+        .programme-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: top;
         }
 
-        .documents-list {
-            list-style: none;
-            margin-left: 0;
+        .programme-table tr:hover {
+            background-color: #f8f9fa;
         }
 
-        .documents-list li {
+        .programme-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Documents */
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .doc-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border: 2px solid #94c11f;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(148, 193, 31, 0.2);
+        }
+
+        .doc-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        iframe {
-            border-radius: 8px;
+        .doc-card a {
+            display: inline-block;
+            background-color: #ee7601;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
             margin-top: 1rem;
         }
 
+        .doc-card a:hover {
+            background-color: #d66801;
+        }
+
+        /* Info pratiques */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .info-item {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #ee7601;
+        }
+
+        .info-item strong {
+            color: #94c11f;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
         footer {
-            background: #333;
+            background-color: #473c32;
             color: white;
-            padding: 2rem;
             text-align: center;
+            padding: 2rem;
             margin-top: 3rem;
         }
 
-        footer h2 {
-            color: white;
-            border-bottom-color: white;
+        footer p {
+            margin: 0;
+            opacity: 0.9;
         }
 
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
-            header h1 {
+            h1 {
                 font-size: 1.8rem;
             }
 
-            .accroche {
+            .tagline {
                 font-size: 1rem;
-            }
-
-            main {
-                padding: 1rem;
             }
 
             section {
                 padding: 1.5rem;
             }
 
-            h2 {
-                font-size: 1.5rem;
+            .container {
+                padding: 1rem;
             }
+
+            .programme-table {
+                font-size: 0.9rem;
+            }
+
+            .programme-table th,
+            .programme-table td {
+                padding: 0.7rem;
+            }
+        }
+
+        /* Highlight box */
+        .highlight {
+            background-color: #fff9e6;
+            border-left: 4px solid #ee7601;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <img src="assets/images/logo.png" alt="Logo de l'organisme de formation" width="200">
+        <img src="logo.png" alt="Logo VT" class="logo">
         <h1>Formation Courage Managérial</h1>
-        <p class="accroche">Osez prendre des décisions audacieuses et inspirez vos équipes dans un environnement en constante évolution</p>
+        <p class="tagline">Osez prendre des décisions et inspirez vos équipes</p>
     </header>
 
-    <main>
-        <section id="presentation">
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Présentation -->
+        <section>
             <h2>Présentation de la formation</h2>
             
-            <h3>Contexte et enjeux</h3>
-            <p>Les organisations évoluent dans un environnement VUCA (Volatilité, Incertitude, Complexité, Ambiguïté). Les managers doivent aujourd'hui prendre des décisions rapides, parfois risquées, et fédérer leurs équipes autour d'objectifs ambitieux.</p>
+            <div class="highlight">
+                <strong>Contexte et enjeux</strong>
+                <p>Les organisations évoluent dans un environnement VUCA (Volatilité, Incertitude, Complexité, Ambiguïté). Les managers doivent aujourd'hui prendre des décisions rapides, parfois risquées, et fédérer leurs équipes autour d'objectifs ambitieux.</p>
+            </div>
+
+            <h3>Public visé</h3>
+            <p>Managers de proximité, chefs de projet et pilotes d'équipes</p>
 
             <h3>Objectifs pédagogiques</h3>
             <ul>
@@ -219,134 +275,116 @@
                 <li>Mettre en place un climat de confiance favorisant l'innovation</li>
             </ul>
 
-            <h3>Public cible</h3>
-            <p>Cette formation s'adresse aux managers de proximité, chefs de projet et pilotes d'équipes.</p>
-
-            <h3>Pré-requis</h3>
-            <p>Aucun pré-requis nécessaire.</p>
-
-            <h3>Méthodologie</h3>
-            <ul>
-                <li>Alternance d'apports théoriques et d'exercices pratiques</li>
-                <li>Travail en sous-groupes et plénières</li>
-                <li>Support digital remis à chaque participant</li>
-            </ul>
+            <h3>Format</h3>
+            <p><strong>Présentiel</strong> – Durée totale : 3 jours</p>
+            <p>Alternance d'apports théoriques et d'exercices pratiques, travail en sous-groupes et plénières. Support digital remis à chaque participant.</p>
         </section>
 
-        <section id="programme">
-            <h2>Programme de la formation</h2>
-            <p>La formation se déroule sur 3 jours et se compose de 4 modules complémentaires :</p>
-
-            <details>
-                <summary><strong>Module 1 : Fundamentals du courage</strong> (½ journée)</summary>
-                <div class="module-content">
-                    <h4>Contenu principal</h4>
-                    <ul>
-                        <li>Définition du courage managérial</li>
-                        <li>Cadre VUCA</li>
-                        <li>Étude de cas</li>
-                    </ul>
-                    <h4>Méthode</h4>
-                    <p>Apports théoriques, exercices de réflexion</p>
-                </div>
-            </details>
-
-            <details>
-                <summary><strong>Module 2 : Connaissance de soi</strong> (½ journée)</summary>
-                <div class="module-content">
-                    <h4>Contenu principal</h4>
-                    <ul>
-                        <li>Identification des valeurs</li>
-                        <li>Analyse des situations de zone de confort</li>
-                        <li>Plan d'action individuel</li>
-                    </ul>
-                    <h4>Méthode</h4>
-                    <p>Tests, retours d'expérience</p>
-                </div>
-            </details>
-
-            <details>
-                <summary><strong>Module 3 : Communication assertive</strong> (1 journée)</summary>
-                <div class="module-content">
-                    <h4>Contenu principal</h4>
-                    <ul>
-                        <li>Techniques de feedback constructif</li>
-                        <li>Gestion des conflits</li>
-                        <li>Jeux de rôle</li>
-                    </ul>
-                    <h4>Méthode</h4>
-                    <p>Ateliers pratiques</p>
-                </div>
-            </details>
-
-            <details>
-                <summary><strong>Module 4 : Leadership inspirant</strong> (1 journée)</summary>
-                <div class="module-content">
-                    <h4>Contenu principal</h4>
-                    <ul>
-                        <li>Posture de leader</li>
-                        <li>Narration influente</li>
-                        <li>Coaching d'équipe</li>
-                    </ul>
-                    <h4>Méthode</h4>
-                    <p>Mises en situation</p>
-                </div>
-            </details>
-
-            <p style="margin-top: 2rem;">
-                <a href="assets/documents/programme.pdf" class="btn" download>Télécharger le programme complet (PDF)</a>
-            </p>
-        </section>
-
-        <section id="infos-pratiques">
-            <h2>Informations pratiques</h2>
+        <!-- Programme -->
+        <section>
+            <h2>Programme détaillé</h2>
             
-            <h3>Dates</h3>
-            <p><strong>Mardi 7 janvier 2026</strong> de 8h à 17h</p>
-
-            <h3>Lieu</h3>
-            <p><strong>Valeurs et Talents</strong><br>
-            3ter avenue des villages<br>
-            44470 Carquefou</p>
-
-            <h3>Localisation</h3>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2707.8!2d-1.485!3d47.287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ec1234567890%3A0x1234567890abcdef!2s3ter%20Avenue%20des%20Villages%2C%2044470%20Carquefou!5e0!3m2!1sfr!2sfr!4v1234567890123!5m2!1sfr!2sfr" 
-                width="100%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Carte de localisation de la formation">
-            </iframe>
+            <div class="programme-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Durée</th>
+                            <th>Contenu principal</th>
+                            <th>Méthode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Fundamentals du courage</strong></td>
+                            <td>½ journée</td>
+                            <td>
+                                – Définition du courage managérial<br>
+                                – Cadre VUCA<br>
+                                – Étude de cas
+                            </td>
+                            <td>Apports théoriques, exercices de réflexion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Connaissance de soi</strong></td>
+                            <td>½ journée</td>
+                            <td>
+                                – Identification des valeurs<br>
+                                – Analyse des situations de zone de confort<br>
+                                – Plan d'action individuel
+                            </td>
+                            <td>Tests, retours d'expérience</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Communication assertive</strong></td>
+                            <td>1 journée</td>
+                            <td>
+                                – Techniques de feedback constructif<br>
+                                – Gestion des conflits<br>
+                                – Jeux de rôle
+                            </td>
+                            <td>Ateliers pratiques</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Leadership inspirant</strong></td>
+                            <td>1 journée</td>
+                            <td>
+                                – Posture de leader<br>
+                                – Narration influente<br>
+                                – Coaching d'équipe
+                            </td>
+                            <td>Mises en situation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-        <section id="documents">
-            <h2>Documents à télécharger</h2>
-            <ul class="documents-list">
-                <li>
-                    <a href="assets/documents/programme.pdf" class="btn" download>Télécharger le programme de formation (PDF)</a>
-                </li>
-                <li>
-                    <a href="assets/documents/livret-stagiaire.pdf" class="btn" download>Télécharger le livret stagiaire (PDF)</a>
-                </li>
-            </ul>
+        <!-- Documents -->
+        <section>
+            <h2>Documents pédagogiques</h2>
+            <div class="documents-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">📄</div>
+                    <h3>Programme de la formation</h3>
+                    <p>Détail complet des modules et objectifs</p>
+                    <a href="programme.pdf" target="_blank" rel="noopener noreferrer">Télécharger le programme</a>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">📘</div>
+                    <h3>Livret stagiaire</h3>
+                    <p>Guide complet pour les participants</p>
+                    <a href="livret-stagiaire.pdf" target="_blank" rel="noopener noreferrer">Télécharger le livret</a>
+                </div>
+            </div>
         </section>
-    </main>
 
+        <!-- Informations pratiques -->
+        <section>
+            <h2>Informations pratiques</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>📅 Dates</strong>
+                    <p>À partir du 7 janvier 2026</p>
+                </div>
+                <div class="info-item">
+                    <strong>📍 Lieu</strong>
+                    <p>VT<br>
+                    3T avenue des villages<br>
+                    44470 Carquefou</p>
+                </div>
+                <div class="info-item">
+                    <strong>📧 Contact</strong>
+                    <p>Email : john.smith@gmail.com<br>
+                    Tél : 159875</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <h2>Contact</h2>
-        <p><strong>Formateur :</strong> John Smith</p>
-        <p><strong>Téléphone :</strong> <a href="tel:+33615845878">06 15 84 58 78</a></p>
-        
-        <p style="margin-top: 2rem;">
-            <a href="https://www.valeurs-et-talents.fr/qui-sommes-nous/nos-engagements-sur-le-handicap/" target="_blank" rel="noopener noreferrer">Politique d'accessibilité et gestion du handicap</a>
-        </p>
-        
-        <p style="margin-top: 1rem; font-size: 0.9rem; color: #999;">
-            &copy; 2026 - Valeurs et Talents - Tous droits réservés
-        </p>
+        <p>Formation proposée par VT – 2025</p>
     </footer>
 </body>
 </html>
